@@ -2,6 +2,7 @@ package com.baiana.imc_app
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.core.widget.doOnTextChanged
@@ -13,6 +14,38 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setListeners()
+        Log.w("lifecycle", "CREATE - Criando a tela.")
+        //finish() //Iniciando o ciclo e, logo após, finalizando.
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.w("lifecycle","START - Tela visível.")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.w("lifecycle","RESUME - Tela liberada para interação.")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.w("lifecycle","PAUSE - Tela pausada.")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.w("lifecycle","STOP - Tela em segundo plano.")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.w("lifecycle","\nRESTART - Reiniciando a tela.")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.w("lifecycle","\nDESTROY - Tela finalizada.")
     }
 
     private fun setListeners() {
