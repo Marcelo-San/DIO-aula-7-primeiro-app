@@ -3,7 +3,7 @@
 
     <style name="title_style">
         <item name="android:textSize">30sp</item>
-        <item name="android:textColor">@android:color/holo_green_light</item>
+        <item name="android:textColor">@android:color/holo_blue_light</item> <!--Cor substituída em Common atributes.-->
         <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">true</item>
     </style>
@@ -12,7 +12,7 @@
         <item name="android:layout_marginTop">36dp</item>
         <item name="android:inputType">numberDecimal</item>
         <item name="android:layout_marginHorizontal">64dp</item>
-        <item name="android:textColor">@android:color/holo_green_dark</item>
+        <item name="android:textColor">@android:color/holo_blue_light</item> <!--Cor substituída em Common atributes.-->
         <item name="android:textStyle">bold</item>
         <item name="android:textAlignment">center</item>
     </style>
